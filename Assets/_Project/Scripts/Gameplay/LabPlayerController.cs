@@ -20,11 +20,18 @@ namespace CalculusLabEscape
         private void Awake()
         {
             controller = GetComponent<CharacterController>();
+        }
+
+        private void Start()
+        {
             playerCamera = GetComponentInChildren<Camera>();
         }
 
         private void Update()
         {
+            if (playerCamera == null)
+                playerCamera = GetComponentInChildren<Camera>();
+
             if (!ControlsEnabled || playerCamera == null)
                 return;
 
