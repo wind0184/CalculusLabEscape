@@ -22,6 +22,16 @@ The first playable increment will include:
 - Windows PC
 - Single-player prototype
 
+## Run in Unity Editor
+
+1. Open `Assets/_Project/Scenes/Level01_Limits.unity`.
+2. Press the Play button at the top of Unity.
+3. Select `ENTER LAB`.
+4. Use WASD to move, the mouse to look, E to access a terminal, and Esc to pause.
+
+The cyber laboratory is generated when Play Mode begins. Complete all three Limits
+terminals to reach the level-completion screen.
+
 ## Repository rules
 
 Only `Assets`, `Packages`, `ProjectSettings`, and project documentation should be committed. Unity-generated folders such as `Library`, `Temp`, `Logs`, and `UserSettings` are excluded.
