@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace CalculusLabEscape
@@ -59,7 +60,8 @@ namespace CalculusLabEscape
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            Keyboard keyboard = Keyboard.current;
+            if (keyboard != null && keyboard.escapeKey.wasPressedThisFrame)
             {
                 if (state == GameState.Playing) SetState(GameState.Paused);
                 else if (state == GameState.Paused) SetState(GameState.Playing);
@@ -71,7 +73,7 @@ namespace CalculusLabEscape
 
             elapsed += Time.deltaTime;
             DetectTerminal();
-            if (activeTerminal != null && Input.GetKeyDown(KeyCode.E))
+            if (activeTerminal != null && keyboard != null && keyboard.eKey.wasPressedThisFrame)
                 SetState(GameState.Question);
         }
 

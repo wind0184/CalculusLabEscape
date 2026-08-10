@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace CalculusLabEscape
 {
@@ -27,18 +28,23 @@ namespace CalculusLabEscape
             if (!ControlsEnabled || playerCamera == null)
                 return;
 
-            float mouseX = Input.GetAxisRaw("Mouse X") * lookSpeed;
-            float mouseY = Input.GetAxisRaw("Mouse Y") * lookSpeed;
+            Vector2 mouseDelta = Mouse.current == null ? Vector2.zero : Mouse.current.delta.ReadValue();
+            float mouseX = mouseDelta.x * lookSpeed * 0.05f;
+            float mouseY = mouseDelta.y * lookSpeed * 0.05f;
             transform.Rotate(Vector3.up * mouseX);
             pitch = Mathf.Clamp(pitch - mouseY, -80f, 80f);
             playerCamera.transform.localEulerAngles = Vector3.right * pitch;
 
             float horizontal = 0f;
             float forward = 0f;
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) horizontal -= 1f;
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) horizontal += 1f;
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) forward += 1f;
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) forward -= 1f;
+            Keyboard keyboard = Keyboard.current;
+            if (keyboard != null)
+            {
+                if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) horizontal -= 1f;
+                if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) horizontal += 1f;
+                if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) forward += 1f;
+                if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) forward -= 1f;
+            }
 
             Vector3 movement = transform.right * horizontal + transform.forward * forward;
             movement = Vector3.ClampMagnitude(movement, 1f) * moveSpeed;
