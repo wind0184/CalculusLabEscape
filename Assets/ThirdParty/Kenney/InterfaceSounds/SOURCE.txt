@@ -1,0 +1,6 @@
+Publisher: Kenney
+Source: https://kenney.nl/assets/interface-sounds
+License: CC0 (see License.txt)
+Imported: 2026-10-14
+Selection: Audio/
+Archive SHA-256: F2193D072726D6758A5F7871B2DCC54DCCE0D5C35C6F0A62F92549B327C81232

@@ -1,0 +1,6 @@
+Publisher: Kenney
+Source: https://kenney.nl/assets/ui-pack-sci-fi
+License: CC0 (see License.txt)
+Imported: 2026-10-14
+Selection: PNG/Blue/Default/
+Archive SHA-256: 4AE5A4949B71BA6C08BFB4D4708B3880915782F7DEAE7BC5872E1D56F0A668AF

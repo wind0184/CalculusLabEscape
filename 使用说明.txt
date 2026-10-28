@@ -1,0 +1,60 @@
+
+修桥救援更新：Scene & UI Workspace → Screen 可选择 Rescue crossing / Rescue reunion，不按 Play 查看过桥和团聚。点击 Rescue preview settings，在 Inspector 用 Progress 滑杆预览动作。Animals → Rescue sequence 保存路线和镜头节点。详情见 PRODUCTION_PHASE16.md。
+
+
+Integration 完成表现：Scene & UI Workspace → Screen 新增 Three modules complete、Modules complete / cover closed、Device powering down、Device powered off。Shutdown preview settings 的 Progress 可不按 Play 预览总关闭动作。四模块完成后仍需打开保护盖并按 Master Deactivation，模块完成灯在关闭装置后仍保持绿色。详情见 PRODUCTION_PHASE17.md。
+
+
+关卡衔接更新：修桥成绩页的 Next: Integration 保存结果后直接打开积分关的说明；积分成绩页的 Choose another mission 返回关卡选择。保存失败会留在成绩页供重试。Editor 的 Summary 预览可直接查看新增按钮。详情见 PRODUCTION_PHASE18.md。
+
+
+暂停页更新：Restart this mission 先确认、先保存，再打开本关的新 Brief。取消、Esc、默认 Enter 都只关闭确认页并保持暂停；保存失败留在确认页重试。旧成绩与存档不会删除。Editor 的 Restart confirmation 可直接预览。详情见 PRODUCTION_PHASE19.md。
+
+
+学习记录更新：Session details → Continue this saved run 可以恢复所选的未完成存档，包括重新开始前保留的较早记录。开始时间显示到秒，已完成或已不可用的记录不会当成新任务打开。Editor 的 Calculus Lab → Learning record preview 可预览记录状态。详情见 PRODUCTION_PHASE20.md。
+
+
+素材导入：Assets/ThirdParty/Kenney 中有森林模型、蓝色科幻 UI 和界面音效。双击 unity/Open-Asset-Preview.cmd，或菜单 Calculus Lab → Assets → Open imported asset preview，不按 Play 查看模型与 UI。当前关卡仍保留原外观。详情见 PRODUCTION_PHASE21.md。
+
+额外素材：Open-Lab-Assets.cmd 查看实验室墙、门、电脑等；Open-Animal-Assets.cmd 查看牛的大小对比，两者都不需要 Play。资源位于 Assets/ThirdParty/Kenney/SpaceStationKit 和 Assets/ThirdParty/Quaternius/FarmAnimals。牛的六个实际动画已导入，但尚未接入修桥关。
+
+实际关卡美术：双击 unity/Open-Dressed-Levels.cmd，不按 Play 查看已布置新树木、石头和草的修桥关。菜单 Calculus Lab → Assets → Open dressed Integration level 可查看新的实验室墙板、显示屏和家具。Hierarchy 的 Imported environment art 可直接编辑。
+
+虚拟模拟天空：修桥关天空已改为青蓝渐变、穹顶网格与扫描光。Edit Mode 可直接看到；若当前 Unity 仍是旧画面，点击 Assets → Refresh。VirtualDome.mat 可修改颜色与网格强度。详情见 PRODUCTION_PHASE24.md。
+
+三关天空统一：Limits、Differentiation 和 Integration 都已保存相同的虚拟穹顶天空，室内两关的雾更淡。双击 unity/Open-Simulation-Levels.cmd 打开 Limits；Unity 菜单 Calculus Lab → Sky 下的 Open Limits / Bridge / Integration simulation 可以切换查看，无需按 Play。World 根节点的 SimulationSky 可修改本关雾色和密度，VirtualDome.mat 控制三关共用的天空。详情见 PRODUCTION_PHASE25.md。
+
+背景丰富：三关的 Simulation background 分组内保存了新增装饰。Limits 有门户外框、曲线墙屏；修桥关有远处浮岛、外围灯柱和下方数据网格；Integration 有监测曲线墙屏和顶部圆环结构。不按 Play 即可在 Hierarchy 选中编辑，材质位于 Assets/_Project/Art/SimulationBackground。沿用 Open-Simulation-Levels.cmd 与 Calculus Lab → Sky 的三个关卡预览入口。详情见 PRODUCTION_PHASE26.md。
+
+修桥关连续地形：原来的方块地面和浮岛装饰只隐藏外观，改由 Connected river landscape 展示连续河岸、起伏山坡、远景森林和岸边岩石。延伸的河面在 Rising river 下，会随原河水升高。不按 Play 就能查看和编辑；外围山坡目前属于景观，行走边界仍沿用原训练区域。若已打开的 Unity 还显示旧画面，选择 Assets → Refresh，本次请求会将地形合并进当前场景并保存。详情见 PRODUCTION_PHASE27.md。
+
+修桥装置外观：Power Core 改为圆形供能机，Converter Box 改为三通道转换架，Bridge Builder 改为带木料、卷扬筒和控制面板的施工台。Repair station machinery 分组保存实际模型，可不按 Play 编辑；材质位于 Assets/_Project/Art/RepairStations。状态灯沿用原来的锁定／当前／完成进度，转换架的三个卡锁仍会逐个升起。名称牌已缩小。若当前窗口仍显示旧方箱，Assets → Refresh 后本次请求会合并新外观并保存。详情见 PRODUCTION_PHASE28.md。
+
+修桥路线与碰撞：Bridge route safety 分组显示原有行走边界的围栏和桥头安全门，不需要 Play 即可看到。救援开始后，门跟随已有过桥进度打开。隐藏的旧树干碰撞已停用，现在的树干和岸边岩石有对应碰撞；外围山坡仍是景观。第一人称近裁剪调为 0.06，减少贴近物件时外观被裁掉的问题。详情见 PRODUCTION_PHASE29.md。
+
+
+修桥机械动作：Calculus Lab → World → Preview Bridge machinery motion 选择保存的机械组件，Inspector 可不按 Play 调整任务阶段、Sample time 和 Bridge installing，并复位。实际游戏中供能机在安装后启动，转换通道逐条出现绿色流动，施工台卷筒只在施工台解锁后的桥面升起过程中转动；暂停和帮助会冻结动作。详情见 PRODUCTION_PHASE30.md。
+
+
+求导题目扩充：参考所提供的 Differentiation PDF，新增 5 道基础题和 2 道综合题，加入修桥装置主线。新任务约 12 组完整数学题、18 个判分步骤，仍为 Bridge repair: 0/3。旧存档保持原 11 步。Calculus Lab → Questions → Open differentiation question bank 可不用 Play 查看和编辑保存的题目。新增题在安装前完成，提示、重试和中途保存恢复均使用各自题目记录。详见 PRODUCTION_PHASE31.md。
+
+
+Limits／Integration 扩题：新开的 Limits 任务为 5 道引导题＋5 道独立检查，每组全部完成后才充能 20%。Integration 每个模块的原有操作后增加两道独立题，共 18 个判分步骤；全部完成后模块才变绿，最后仍需 Master Deactivation。旧 Limits／Integration 存档保留原 5／10 步。Questions 菜单可以直接打开保存的两份新增题库；UI 中的新题干和选项支持指数上标与根号。详见 PRODUCTION_PHASE32.md。
+
+
+题目细节更新：三个关卡增加阶段提示，区分引导题、独立检查和安装／应用。修桥显示当前装置检查题的进度；积分选项答对后转绿，完成两道检查才标记模块稳定；Limits 明确提示答完后仍需 Apply calibration 才增加 20% 充能。不按 Play：Calculus Lab → Scene & UI Workspace → UI preview → Screen 选择 Independent check 或 Check accepted，再点 Show selected UI。共享布局在三个 UI prefab 的 QuestionJourney 下编辑。详见 PRODUCTION_PHASE33.md。
+
+
+答题背景更新：三个关卡改用蓝灰模拟空间、柔光与淡透视网格，并增加圆角答题面板和场景信息面板。背景保存于三个 UI prefab 的 Puzzle → SimulationAnswerArt，下方各对象可直接在 Inspector 调整颜色、圆角和尺寸，不必按 Play。Calculus Lab → Scene & UI Workspace 可查看题目预览。仅更新 UI 背景，题目与存档规则保持原样。详见 PRODUCTION_PHASE34.md。
+
+
+答题氛围更新：加入虚拟实验室环境图，远处平台、墙体支架和灯带可透过面板看到；场景预览增加取景框和刻度，答题区增加边缘细节、操作分区线与连接轨道。顶部加入传送门／桥梁／装置主题图标。素材和完整生成提示词存于 Assets/_Project/Art/UIAtmosphere；在 UI prefab 的 Puzzle → SimulationAnswerArt → SimulationRoomImage 调整环境图，在 AnswerGlassSurface 调整透明度。Editor 的题目预览可直接查看。详见 PRODUCTION_PHASE35.md。
+
+
+Editor 预览修复：深色正式 UI 的背景、圆角面板、关卡图标、传送门／图像和连线图形已保存 CanvasRenderer，不必按 Play 才能显示。打开 Calculus Lab → Scene & UI Workspace，选关卡，在 UI preview → Screen 选择画面。Limits 新增 Numerical approach、Graph marker、Agreeing sides、Limit and point value、Unequal sides、Independent numerical、Independent check、Check accepted、Portal ready。预览只显示示例数据，不创建学习记录。修桥和积分完成预览已同步为 18 步题量。详见 PRODUCTION_PHASE36.md。
+
+答题反馈修复：三关修改答案后会清除上一轮对错提示，重新提交再显示新的结果；Integration 进入独立检查题时也会清除上一题的绿色解答。已答对并锁定的答案保留成功提示，成绩、历史尝试和存档不受影响。详见 PRODUCTION_PHASE37.md。
+
+
+引导与导航修复：修桥首次说明明确先 Next calibration 完成全部检查，再安装组件；Integration 的 Finish module 会直接返回装置总览，不再多点一次 Case overview。Next calibration 仍进入本模块下一题，四模块完成后仍需单独执行 Master Deactivation。说明保存于 MissionIntroductions.asset，Editor 的 Guide 预览也会使用新文字。详见 PRODUCTION_PHASE38.md。
+

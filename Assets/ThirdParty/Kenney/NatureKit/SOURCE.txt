@@ -1,0 +1,6 @@
+Publisher: Kenney
+Source: https://kenney.nl/assets/nature-kit
+License: CC0 (see License.txt)
+Imported: 2026-10-14
+Selection: Models/FBX format/
+Archive SHA-256: FA7974A0D342BFE63C38664BA9F8EC1A4AAB8EA25F099BDC56870E33588C4D9D

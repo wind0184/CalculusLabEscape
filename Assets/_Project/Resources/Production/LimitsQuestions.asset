@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b8d80e53bc48f44ac9806352250ab9, type: 3}
+  m_Name: LimitsQuestions
+  m_EditorClassIdentifier: Assembly-CSharp::CalculusLabEscape.LimitsQuestionBank
+  questions:
+  - id: L1
+    title: Numerical approach
+    prompt: Find the limit of f(x) = x + 2 as x approaches 3.
+    display: 
+    approachPoint: 3
+    kind: 0
+    options: []
+    correctOption: 0
+    expected:
+    - 5
+    errorCode: NUMERICAL_APPROACH
+    explanation: 'Both sides approach 5. For a polynomial, substitute the approach
+      point. Example: 2x + 1 approaches 7 as x approaches 3.'
+    basicHint: Compare the table outputs on either side of the target. Which value
+      do they move towards?
+    ruleReminder: A two-sided limit describes the common value approached from both
+      sides. For a polynomial, evaluate the expression at the approach point.
+    demonstration: 'Similar example: for g(x) = 2x + 1 as x approaches 4, g(3.99)
+      = 8.98 and g(4.01) = 9.02. Both sides approach 9.'
+  - id: L2
+    title: Read the approaching value
+    prompt: Probe the curve near x = 2. Move the answer marker to the approached
+      y-value.
+    display: 
+    approachPoint: 2
+    kind: 1
+    options: []
+    correctOption: 0
+    expected:
+    - 4
+    errorCode: GRAPH_LIMIT
+    explanation: Nearby values approach y = 4. An open point does not remove the
+      limit.
+    basicHint: Probe the curve closer to the target from each side. Track the approached
+      y-value.
+    ruleReminder: A limit describes the value approached by a function from both
+      sides. An open point can indicate the limit even when the function is not defined
+      at that point.
+    demonstration: 'Similar example: a curve approaches an open point (1,6) from
+      both sides. Its limit at x = 1 is 6, even if no value is assigned at the point.'
+  - id: L3
+    title: Compare both sides
+    prompt: Find the left-hand, right-hand and two-sided limits as x approaches 2.
+    display: 
+    approachPoint: 2
+    kind: 2
+    options: []
+    correctOption: 0
+    expected:
+    - 3
+    - 3
+    - 3
+    errorCode: ONE_SIDED_MISMATCH
+    explanation: Both expressions approach 3, so the two-sided limit is 3.
+    basicHint: Use the left expression for the left-hand field and the right expression
+      for the right-hand field. Compare them last.
+    ruleReminder: Find the left-hand and right-hand limits separately. A two-sided
+      limit exists only if they agree.
+    demonstration: 'Similar example: at x = 2, left expression x + 4 approaches 6
+      and right expression 8 - x approaches 6. The two-sided limit is 6.'
+  - id: L4
+    title: Limit versus function value
+    prompt: The curve has an open point (2,4) and a filled point (2,7). Enter the
+      two values.
+    display: 
+    approachPoint: 2
+    kind: 3
+    options: []
+    correctOption: 0
+    expected:
+    - 4
+    - 7
+    errorCode: LIMIT_VS_FUNCTION_VALUE
+    explanation: The curve approaches 4; the filled point sets f(2) = 7.
+    basicHint: Use the nearby curve for the limit field and the filled point for
+      the function-value field.
+    ruleReminder: A limit describes nearby behaviour. A separately assigned point
+      value is read from the filled point.
+    demonstration: 'Similar example: an open point (1,6) is approached from both
+      sides, while the filled point is (1,9). The limit is 6 and g(1) is 9.'
+  - id: L5
+    title: Choose a conclusion
+    prompt: Left-hand limit = 2. Right-hand limit = 5. Choose a conclusion and order
+      the reason.
+    display: 
+    approachPoint: 
+    kind: 4
+    options: []
+    correctOption: 0
+    expected: []
+    errorCode: UNEQUAL_SIDES_DNE
+    explanation: Left-hand limit is not equal to right-hand limit, so the two-sided
+      limit does not exist.
+    basicHint: Compare the two supplied one-sided values before choosing a conclusion
+      and arranging the reason cards.
+    ruleReminder: Compare the two supplied one-sided limits. A two-sided limit exists
+      only when they are equal; if they differ, it does not exist.
+    demonstration: 'Similar example: if the left-hand limit is 5 and the right-hand
+      limit is 9, they disagree. There is no two-sided limit because the left-hand
+      limit is not equal to the right-hand limit.'

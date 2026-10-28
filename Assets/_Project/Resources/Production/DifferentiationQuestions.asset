@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d607a38ce04fdc8104c71ef86f5f93, type: 3}
+  m_Name: DifferentiationQuestions
+  m_EditorClassIdentifier: Assembly-CSharp::CalculusLabEscape.DifferentiationQuestionBank
+  version: pdf-power-rule-1
+  questions:
+  - id: DX_BASIC_1
+    title: Power Core / independent calibration
+    afterStage: 0
+    sourcePage: 19
+    prompt: Differentiate 7x^10. Enter the new coefficient and exponent.
+    rewrite: 7x^10
+    explanation: Multiply 7 by 10 to get 70; 10 - 1 = 9. The derivative is 70x^9.
+    basicHint: Identify the coefficient and exponent. Calculate the new coefficient
+      and new exponent separately.
+    ruleReminder: 'Power Rule: d(a*x^n)/dx = (a*n)x^(n-1). Multiply the original
+      coefficient by the exponent, then subtract one from the exponent.'
+    demonstration: 'Similar example: d(4x^7)/dx = 4(7)x^(7-1) = 28x^6. Apply these
+      operations to your own coefficient and exponent.'
+    choiceAnswer: 0
+    coefficient: 70
+    exponent: 9
+    options: []
+    optionFeedback: []
+    correctOption: 0
+  - id: DX_BASIC_2
+    title: Converter / negative exponent
+    afterStage: 3
+    sourcePage: 15
+    prompt: Differentiate x^(-4), for x != 0. Enter coefficient and exponent.
+    rewrite: 1x^(-4)
+    explanation: 1 times -4 = -4; -4 - 1 = -5. The derivative is -4x^(-5).
+    basicHint: Keep the exponent's negative sign when multiplying. Subtract one whole
+      unit for the new exponent.
+    ruleReminder: The Power Rule also applies to negative exponents. Multiply the
+      coefficient by the original negative exponent, then subtract one from that
+      exponent. Track both signs separately.
+    demonstration: 'Similar example: d(x^(-7))/dx = -7x^(-8), for x != 0. Subtracting
+      one makes a negative exponent more negative.'
+    choiceAnswer: 0
+    coefficient: -4
+    exponent: -5
+    options: []
+    optionFeedback: []
+    correctOption: 0
+  - id: DX_BASIC_3
+    title: Converter / root of a power
+    afterStage: 3
+    sourcePage: 17
+    prompt: Differentiate sqrt(x^3), for x > 0. Enter coefficient and exponent.
+    rewrite: sqrt(x^3) = x^(3/2)
+    explanation: Rewrite as x^(3/2). Multiply by 3/2, then 3/2 - 1 = 1/2. The derivative
+      is (3/2)x^(1/2).
+    basicHint: First rewrite the square root as a fractional power. Think about how
+      the power inside the root and the root index determine the exponent.
+    ruleReminder: 'Root rule: the kth root of x^m is x^(m/k). The inside power is
+      the numerator; the root index is the denominator. Then multiply by this exponent
+      and subtract one for the derivative.'
+    demonstration: 'Similar example: the cube root of x^2 is x^(2/3): inside power
+      2 divided by root index 3. Then 1(2/3)x^(2/3-1) = (2/3)x^(-1/3), for x > 0.'
+    choiceAnswer: 0
+    coefficient: 3/2
+    exponent: 1/2
+    options: []
+    optionFeedback: []
+    correctOption: 0
+  - id: DX_BASIC_4
+    title: Converter / fractional coefficient
+    afterStage: 3
+    sourcePage: 21
+    prompt: Differentiate 5/(4x^4), for x != 0. Enter coefficient and exponent.
+    rewrite: 5/(4x^4) = (5/4)x^(-4)
+    explanation: (5/4) times -4 = -5; -4 - 1 = -5. The derivative is -5x^(-5), or
+      -5/x^5.
+    basicHint: Separate the numerical fraction from the reciprocal power. Preserve
+      both when applying the rule.
+    ruleReminder: Rewrite a/(b*x^n) as (a/b)x^(-n). Keep the numerical fraction,
+      multiply it by the negative exponent, then subtract one from that exponent.
+    demonstration: 'Similar example: 3/(2x^6) = (3/2)x^(-6). Its derivative is -9x^(-7),
+      for x != 0.'
+    choiceAnswer: 0
+    coefficient: -5
+    exponent: -5
+    options: []
+    optionFeedback: []
+    correctOption: 0
+  - id: DX_BASIC_5
+    title: Converter / reciprocal and signs
+    afterStage: 3
+    sourcePage: 23
+    prompt: Differentiate -2/x^8, for x != 0. Enter coefficient and exponent.
+    rewrite: -2/x^8 = -2x^(-8)
+    explanation: 'Two negative factors give a positive coefficient: -2 times -8 =
+      16. The exponent is -8 - 1 = -9, giving 16x^(-9).'
+    basicHint: Rewrite the reciprocal as a negative power. Track the signs in the
+      coefficient multiplication separately.
+    ruleReminder: 'Power Rule: d(a*x^n)/dx = (a*n)x^(n-1). Rewrite roots and reciprocals
+      as powers first.'
+    demonstration: 'Similar example: -3/x^5 = -3x^(-5), whose derivative is 15x^(-6),
+      for x != 0. Two negative factors produce a positive coefficient.'
+    choiceAnswer: 0
+    coefficient: 16
+    exponent: -9
+    options: []
+    optionFeedback: []
+    correctOption: 0
+  - id: DX_APPLY_2
+    title: Bridge Builder / fourth-root expression
+    afterStage: 7
+    sourcePage: 27
+    prompt: For x > 0, differentiate f(x) = (2x - 3)/x^(1/4). Choose the full derivative.
+    rewrite: (2x - 3)/x^(1/4) = 2x^(3/4) - 3x^(-1/4)
+    explanation: 'Rewrite as 2x^(3/4) - 3x^(-1/4). Differentiate both terms: (3/2)x^(-1/4)
+      + (3/4)x^(-5/4).'
+    basicHint: Try splitting the fraction into separate terms before differentiating.
+      Pay attention to how dividing by a power of x changes each term's exponent.
+    ruleReminder: 'Split the fraction into separate terms. When dividing powers of
+      x, subtract the denominator exponent from each numerator exponent: x^p / x^q
+      = x^(p-q). Then apply the Power Rule to each term.'
+    demonstration: 'Similar example: for x > 0, (3x + 2)/x^(1/3). Split: 3x^(1-1/3)
+      + 2x^(0-1/3) = 3x^(2/3) + 2x^(-1/3). Differentiate: 2x^(-1/3) - (2/3)x^(-4/3).'
+    choiceAnswer: 1
+    coefficient: 
+    exponent: 
+    options:
+    - (3/2)x^(-1/4) - (3/4)x^(-5/4)
+    - (3/2)x^(-1/4) + (3/4)x^(-5/4)
+    - (3/2)x^(3/4) + (3/4)x^(-1/4)
+    optionFeedback:
+    - The first term is correct. The second coefficient is positive because -3 times
+      -1/4 is positive.
+    - Correct.
+    - 'The coefficients are correct. Subtract one from both rewritten exponents:
+      3/4 and -1/4.'
+    correctOption: 1
+  - id: DX_APPLY_3
+    title: Bridge Builder / simplify three terms
+    afterStage: 7
+    sourcePage: 29
+    prompt: For x > 0, differentiate (x^2 + 5x - 3)/(3sqrt(x)). Choose the full derivative.
+    rewrite: (1/3)x^(3/2) + (5/3)x^(1/2) - x^(-1/2)
+    explanation: Divide each term by 3sqrt(x), then apply the Power Rule. The result
+      is (1/2)x^(1/2) + (5/6)x^(-1/2) + (1/2)x^(-3/2).
+    basicHint: Look carefully at the denominator. How does it affect the coefficient
+      and exponent of each numerator term? Rewrite the expression before differentiating.
+    ruleReminder: Divide every numerator term by the entire denominator, including
+      its numerical coefficient. Subtract the denominator exponent, rewrite using
+      fractional exponents, then differentiate each term while preserving signs.
+    demonstration: 'Similar example: for x > 0, (6x^2 - 4)/(2sqrt(x)). Divide coefficients
+      by 2 and subtract 1/2 from each power: 3x^(3/2) - 2x^(-1/2). Differentiate:
+      (9/2)x^(1/2) + x^(-3/2).'
+    choiceAnswer: 1
+    coefficient: 
+    exponent: 
+    options:
+    - x^(1/2) + x^(-1/2) + x^(-3/2)
+    - (1/2)x^(1/2) - (5/6)x^(-1/2) - (1/2)x^(-3/2)
+    - (1/2)x^(1/2) + (5/6)x^(-1/2) + (1/2)x^(-3/2)
+    optionFeedback:
+    - The new exponents are correct. Keep the coefficients produced by division and
+      multiplication.
+    - 'Check each sign separately: the second term stays positive, and two negative
+      factors make the last coefficient positive.'
+    - Correct.
+    correctOption: 2

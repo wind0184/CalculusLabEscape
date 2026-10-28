@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ab041495f8413f8c9b7e05247deed6, type: 3}
+  m_Name: IntegrationQuestions
+  m_EditorClassIdentifier: Assembly-CSharp::CalculusLabEscape.IntegrationQuestionBank
+  questions:
+  - id: IX_DIAL1
+    title: Exponent Dial / coefficient check
+    module: 0
+    correctOption: 1
+    prompt: Choose the general indefinite integral of 6x^2.
+    hint: Raise the exponent first. Divide the original coefficient by that new exponent
+      and check the constant.
+    explanation: 'Raise 2 to 3 and divide 6 by 3: 2x^3 + C.'
+    ruleReminder: For n != -1, integral of a*x^n dx = a*x^(n+1)/(n+1) + C. Raise
+      the exponent, then divide by the new exponent.
+    demonstration: 'Similar example: integrate 4x^3 to get (4/4)x^4 + C = x^4 + C.'
+    options:
+    - 18x + C
+    - 2x^3 + C
+    - 2x^3
+    wrongFeedback:
+    - This differentiates the term. Integration raises the exponent and divides by
+      the raised value.
+    - Correct.
+    - The expression is an antiderivative, but the general indefinite integral needs
+      +C.
+    errorCodes:
+    - INT_EXPONENT
+    - 
+    - MISSING_C
+  - id: IX_DIAL2
+    title: Exponent Dial / signed coefficient
+    module: 0
+    correctOption: 2
+    prompt: Choose the general indefinite integral of -8x^3.
+    hint: Raise the exponent and divide by it. Check that the coefficient keeps its
+      original sign.
+    explanation: -8 divided by 4 is -2, giving -2x^4 + C.
+    ruleReminder: For n != -1, integral of a*x^n dx = a*x^(n+1)/(n+1) + C. Raise
+      the exponent, then divide by the new exponent.
+    demonstration: 'Similar example: integrate -15x^4 to get (-15/5)x^5 + C = -3x^5
+      + C.'
+    options:
+    - 2x^4 + C
+    - -32x^4 + C
+    - -2x^4 + C
+    wrongFeedback:
+    - Check the coefficient's sign. Dividing by a positive raised exponent preserves
+      the original sign.
+    - Divide by the new exponent rather than multiplying.
+    - Correct.
+    errorCodes:
+    - INT_DIVISOR
+    - INT_DIVISOR
+    - 
+  - id: IX_WIRE1
+    title: Wires / one shared constant
+    module: 1
+    correctOption: 0
+    prompt: Choose the general indefinite integral of 2x + 3.
+    hint: Integrate the linear term and the constant term separately. Use one constant
+      after combining.
+    explanation: The two antiderivatives are x^2 and 3x. One shared +C gives x^2
+      + 3x + C.
+    ruleReminder: Integrate each term separately. For a*x, the integral is (a/2)x^2.
+      For a constant b, the integral is b*x. Combine the results with one +C.
+    demonstration: 'Similar example: the integral of 6x + 4 is 3x^2 + 4x + C. Differentiate
+      both terms to check.'
+    options:
+    - x^2 + 3x + C
+    - x^2 + 3x
+    - 2x^2 + 3 + C
+    wrongFeedback:
+    - Correct.
+    - Include one arbitrary constant for the full indefinite integral.
+    - Apply the integration rule to each term separately. Check both the linear term
+      and the constant term.
+    errorCodes:
+    - 
+    - MISSING_C
+    - TERM_ANTIDERIVATIVE
+  - id: IX_WIRE2
+    title: Wires / three independent terms
+    module: 1
+    correctOption: 1
+    prompt: Choose the general indefinite integral of 3x^2 - 4x + 5.
+    hint: Work on each term separately, preserving signs. Check how a constant term
+      changes when integrated.
+    explanation: 'Integrate term by term: x^3 - 2x^2 + 5x + C.'
+    ruleReminder: For a polynomial, integrate each term separately using the Power
+      Rule. Preserve the sign of every coefficient. A constant term becomes a linear
+      term, and the combined result needs one +C.
+    demonstration: 'Similar example: the integral of 8x^3 - 6x + 7 is 2x^4 - 3x^2
+      + 7x + C.'
+    options:
+    - x^3 + 2x^2 + 5x + C
+    - x^3 - 2x^2 + 5x + C
+    - x^3 - 2x^2 + 5 + C
+    wrongFeedback:
+    - The negative linear term produces a negative quadratic term.
+    - Correct.
+    - A constant integrates to a linear term. Check the final term's dependence on
+      x.
+    errorCodes:
+    - TERM_ANTIDERIVATIVE
+    - 
+    - INTEGRATION_CONSTANT
+  - id: IX_SEQ1
+    title: Sequence / cube-root power
+    module: 2
+    correctOption: 0
+    prompt: For x > 0, choose the general integral of x^(1/3), the cube root of x.
+    hint: Express the root as a fractional power. Add one whole unit, then divide
+      by the raised exponent.
+    explanation: 1/3 + 1 = 4/3. Dividing by 4/3 gives (3/4)x^(4/3) + C.
+    ruleReminder: For n != -1, integral of a*x^n dx = a*x^(n+1)/(n+1) + C. Raise
+      the exponent, then divide by the new exponent.
+    demonstration: 'Similar example: integrate x^(1/4), for x > 0. Raising gives
+      5/4; dividing by it gives (4/5)x^(5/4) + C.'
+    options:
+    - (3/4)x^(4/3) + C
+    - (4/3)x^(4/3) + C
+    - (1/3)x^(-2/3) + C
+    wrongFeedback:
+    - Correct.
+    - Divide the original coefficient by the raised exponent. Dividing by a fraction
+      multiplies by its reciprocal.
+    - This lowers the exponent. Integration raises it by one.
+    errorCodes:
+    - 
+    - INT_DIVISOR
+    - INT_EXPONENT
+  - id: IX_SEQ2
+    title: Sequence / reciprocal square root
+    module: 2
+    correctOption: 2
+    prompt: For x > 0, choose the general indefinite integral of 2/sqrt(x).
+    hint: Rewrite the reciprocal root as a negative fractional power. Increase the
+      exponent by one, then divide the original coefficient by this new exponent.
+    explanation: 'Divide 2 by 1/2 to obtain 4: the integral is 4sqrt(x) + C.'
+    ruleReminder: For n != -1, integral of a*x^n dx = a*x^(n+1)/(n+1) + C. Raise
+      the exponent, then divide by the new exponent.
+    demonstration: 'Similar example: integrate 3/x^(1/3), for x > 0. Rewrite as 3x^(-1/3),
+      raise to 2/3 and divide to get (9/2)x^(2/3) + C.'
+    options:
+    - -x^(-3/2) + C
+    - sqrt(x) + C
+    - 4sqrt(x) + C
+    wrongFeedback:
+    - That choice uses differentiation. Integration raises the rewritten exponent
+      by one.
+    - Divide the original coefficient by the raised exponent rather than multiplying.
+    - Correct.
+    errorCodes:
+    - INT_EXPONENT
+    - INT_DIVISOR
+    - 
+  - id: IX_BOUND1
+    title: Pressure / nonzero lower bound
+    module: 3
+    correctOption: 2
+    prompt: Evaluate the definite integral of 2x from 1 to 3.
+    hint: Find an antiderivative first. Evaluate it at both bounds and subtract in
+      the correct order.
+    explanation: F(3) - F(1) = 9 - 1 = 8. The constants cancel; no +C appears in
+      the numerical result.
+    ruleReminder: Find an antiderivative F first. A definite integral is F(upper)
+      - F(lower); the arbitrary constants cancel.
+    demonstration: 'Similar example: integrate 4x from 2 to 4. With F(x) = 2x^2,
+      the result is 32 - 8 = 24. The constants cancel.'
+    options:
+    - 8 + C
+    - 10
+    - 8
+    wrongFeedback:
+    - A definite integral gives a number; the arbitrary constants cancel.
+    - Subtract the lower-bound value instead of adding it.
+    - Correct.
+    errorCodes:
+    - DEFINITE_ACCUMULATION
+    - DEFINITE_ACCUMULATION
+    - 
+  - id: IX_BOUND2
+    title: Pressure / quadratic accumulation
+    module: 3
+    correctOption: 1
+    prompt: Evaluate the definite integral of 3x^2 from 0 to 2.
+    hint: Integrate the power before substituting the bounds. Check that you are
+      evaluating accumulation rather than an endpoint output.
+    explanation: F(2) - F(0) = 2^3 - 0^3 = 8.
+    ruleReminder: Find an antiderivative F first. A definite integral is F(upper)
+      - F(lower); the arbitrary constants cancel.
+    demonstration: 'Similar example: integrate 5x^4 from 0 to 2. With F(x) = x^5,
+      F(2) - F(0) = 32.'
+    options:
+    - 4
+    - 8
+    - 12
+    wrongFeedback:
+    - Find the antiderivative before evaluating the bounds.
+    - Correct.
+    - 12 is the integrand at 2, not the accumulated integral.
+    errorCodes:
+    - DEFINITE_ACCUMULATION
+    - 
+    - DEFINITE_ACCUMULATION

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce9c20705ec223408c2b7385b30230e, type: 3}
+  m_Name: MissionSounds
+  m_EditorClassIdentifier: Assembly-CSharp::CalculusLabEscape.MissionSoundBank
+  mixer: {fileID: 24100000, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+  cues:
+  - id: click
+    clip: {fileID: 8300000, guid: 4e732d55b7d20ac489a9726b3208fc23, type: 3}
+    output: {fileID: -3535241086810622867, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: correct
+    clip: {fileID: 8300000, guid: 0185b0bbe8789ef4fab9386ba4e0b86d, type: 3}
+    output: {fileID: 9203089199267520632, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: retry
+    clip: {fileID: 8300000, guid: eaefeacfb64b31842835bc3414ccc7fb, type: 3}
+    output: {fileID: 992087838035801854, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: hint
+    clip: {fileID: 8300000, guid: 6721595698ffc344fa237b27cf6510e1, type: 3}
+    output: {fileID: -7395145120506378592, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: robot
+    clip: {fileID: 8300000, guid: d3bd6294286dd2a459f2e64c82a8e17f, type: 3}
+    output: {fileID: -3486935788856666886, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: river
+    clip: {fileID: 8300000, guid: d10d2fc589a3e254d9d5c1a412405a03, type: 3}
+    output: {fileID: 8264545509282723214, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: switch
+    clip: {fileID: 8300000, guid: c17b4ddfdfee1ef4989a4089b05d696a, type: 3}
+    output: {fileID: -4245015637444322478, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: pressure
+    clip: {fileID: 8300000, guid: b0983a3716159234e89194851fae6cb7, type: 3}
+    output: {fileID: 6557774714385787736, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: portal
+    clip: {fileID: 8300000, guid: dd0f2096758cd9741b4906a59e7f0917, type: 3}
+    output: {fileID: 6796596468428548792, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: completion
+    clip: {fileID: 8300000, guid: 131a2eff2ff2e2c4588605c4c6e902a0, type: 3}
+    output: {fileID: -1519908516114980138, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: bridge
+    clip: {fileID: 8300000, guid: f43088e9ca363784c87b9f981a235472, type: 3}
+    output: {fileID: -7426351664702375402, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85
+  - id: shutdown
+    clip: {fileID: 8300000, guid: 6eb90f0c8ea0ce2478fae181f7be293e, type: 3}
+    output: {fileID: -2279622671899021947, guid: 80945b67756f1dc4abfeef012bc84083, type: 2}
+    volume: 0.85

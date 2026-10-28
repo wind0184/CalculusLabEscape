@@ -1,0 +1,20 @@
+[
+  {
+    "source": "https://kenney.nl/assets/nature-kit",
+    "sha256": "FA7974A0D342BFE63C38664BA9F8EC1A4AAB8EA25F099BDC56870E33588C4D9D",
+    "pack": "NatureKit",
+    "count": 329
+  },
+  {
+    "source": "https://kenney.nl/assets/ui-pack-sci-fi",
+    "sha256": "4AE5A4949B71BA6C08BFB4D4708B3880915782F7DEAE7BC5872E1D56F0A668AF",
+    "pack": "SciFiUI",
+    "count": 60
+  },
+  {
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "sha256": "F2193D072726D6758A5F7871B2DCC54DCCE0D5C35C6F0A62F92549B327C81232",
+    "pack": "InterfaceSounds",
+    "count": 100
+  }
+]

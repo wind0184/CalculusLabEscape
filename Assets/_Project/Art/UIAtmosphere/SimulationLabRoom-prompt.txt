@@ -1,0 +1,10 @@
+Generation mode: built-in imagegen tool; new image; opaque background.
+Selected asset: SimulationLabRoom-v1.png
+
+Use case: stylized-concept
+Asset type: production background texture for a Unity educational calculus puzzle game, landscape 16:9, 1920x1080 or larger.
+Primary request: a rich but restrained virtual simulation laboratory interior behind translucent navy question panels.
+Scene: a spacious clean futuristic training laboratory, dark blue-gray matte architecture, a central low circular simulation dais recessed into the floor, several slender structural wall ribs, believable layered ceiling beams and recessed strip lighting, translucent cyan holographic wireframe floor paths leading into the distance, a few quiet technical console plinths along the far edges. Stylized 3D game environment art with softly beveled geometric forms and high quality ambient occlusion, matching a low-poly educational game rather than a photograph. No characters.
+Composition: wide straight-on 16:9 view from slightly above desk height, strong sense of depth. Environmental detail primarily at left and right edges and in the top third; middle and lower center remain visually quiet and dark so white educational questions and answer controls can be overlaid. Full scene, no screen borders, no UI panels, no typography. Distant central dais is small and unobtrusive. Structures at multiple distances, subtle atmospheric perspective.
+Lighting: soft cyan and teal architectural light strips, a few muted blue-violet distant accents, gentle volumetric glow, soft shadows, dark calm legible palette, polished but not shiny. No blown highlights.
+Avoid: all text, mathematical formulas, letters, logos, watermarks, people, guns, weapons, cables crossing foreground, busy star fields, saturated neon, bright focal points, giant circles, interface widgets, flat vector diagram appearance. This is a real environment texture to import, not a game UI mockup.

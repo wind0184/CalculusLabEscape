@@ -1,0 +1,6 @@
+Source: https://kenney.nl/assets/input-prompts
+Downloaded: 2026-10-18
+Edition: Free
+Archive: kenney_input-prompts_1.5.zip
+SHA256: ac2fcf599080b0f3ba2d174c9474db6df1a0e96ff0662580e2da79a122ab78a1
+Only model/image data imported; no third-party executable scripts.

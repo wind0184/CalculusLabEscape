@@ -1,0 +1,5 @@
+Source: https://opengameart.org/content/lowpoly-animated-farm-animal-pack
+License: CC0 (see License.txt)
+Checked: 2026-10-14
+Archive: quaternius_farm-animals.zip
+SHA256: 9FF42B7E2445EAF259E4734C08172637DB92E4B59A6145909AC56D946152C39B

@@ -1,0 +1,2 @@
+Assets/_Project/Art/UI/MainMenu/Timeline/*.anim filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Art/LaboratoryAI/Animations/*.anim filter=lfs diff=lfs merge=lfs -text

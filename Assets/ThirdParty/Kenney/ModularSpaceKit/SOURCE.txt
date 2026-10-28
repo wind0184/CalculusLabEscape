@@ -1,0 +1,6 @@
+Source: https://kenney.nl/assets/modular-space-kit
+Downloaded: 2026-10-18
+Edition: Free
+Archive: kenney_modular-space-kit_1.0.zip
+SHA256: f394f7fd9eaf29c9de7e090e55b69926f699841af33b0b116f5cc0088de8a4dc
+Only model/image data imported; no third-party executable scripts.

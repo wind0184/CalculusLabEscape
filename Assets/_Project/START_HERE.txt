@@ -1,0 +1,18 @@
+从这里开始 / START HERE
+
+打开 Scenes/MainMenu 或 Scenes/Level02_Differentiation。
+在 Hierarchy 选择 Game Manager，查看场景、玩家、UI 的连接。
+
+Scenes      正式场景
+Prefabs     UI、机器人与可复用物体
+Resources/Production  题库与引导数据
+Scripts/Runtime      正式游戏脚本
+Scripts/Editor       制作与检查工具
+Scripts/Legacy       早期实现
+
+UI：Prefabs/Resources/Production
+按钮：Button > On Click() 中直接查看对应方法。
+玩家：LabPlayerController = 移动；PlayerInteraction = E / Escape。
+
+详细学习步骤请读项目根目录的“从这里开始.md”。
+日常只打开 CalculusLabEscape；UnityValidation 是本次验证副本。
